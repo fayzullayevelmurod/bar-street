@@ -545,7 +545,7 @@ section {
 // Menu
 .menu {
     position: fixed;
-    z-index: 2;
+    z-index: 4;
     background: white;
     left: 0;
     top: 98px;
@@ -1057,6 +1057,10 @@ section {
         line-height: 27.5px;    
         color: $color-gray-200;
 
+        @include media(769) {
+            margin: 0 auto 30px auto;
+        }
+
         @include media(577) {
             font-size: 18px;
             line-height: 22px;
@@ -1093,6 +1097,7 @@ section {
 
         @include media(577) {
             width: 100%;
+            height: 45px;
         }
     }
 
@@ -1106,6 +1111,7 @@ section {
         @include media(577) {
             width: 100%;
             margin-top: 15px;
+            height: 45px;
         }
     }
 
@@ -1128,9 +1134,50 @@ section {
     background: $color-blue-100;
     padding: 45px 0 72px;
 
+    @include media(767) {
+        padding: 30px 0;
+    }
+
     &_imgs {
+        display: flex;
         gap: 36px;
         margin-bottom: 100px;
+
+        @include media(1201) {
+            gap: 33px;
+        }
+
+        @include media(993) {
+            gap: 25px;
+        }
+
+        @include media(769) {
+            margin-bottom: 40px;
+        }
+
+        @include media(767) {
+            display: none;
+        }
+    }
+
+    .footer_imgs_media {
+        display: none;
+        margin-bottom: 50px;
+
+        @include media(767) {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .footer_imgs_media_top {
+            gap: 14px;
+        }
+
+        img {
+            height: 126px;
+            object-fit: cover;
+        }
     }
 
     &_image {
@@ -1158,28 +1205,58 @@ section {
         bottom: 20px;
         left: 20px;
         right: 20px;
+
+        @include media(767) {
+            bottom: 15px;
+            left: 15px;
+        }
     }
 
     &_link {
         max-width: 709px;
         gap: 22px 32px;
 
+        @include media(1201) {
+            max-width: 439px;
+        }
+
+        @include media(767) {
+            max-width: 100%;
+            gap: 25px 30px;
+        }
+
         a {
             font-size: 18px;
             font-weight: 400;
             line-height: 22.5px;
             color: $color-red-100;
+
+            @include media(767) {
+                font-size: 16px;
+                line-height: 20px;
+            }
         }
     }
 
     &_center {
         gap: 62px;
         margin-bottom: 35px;
+
+        @include media(993) {
+            gap: 40px;
+            flex-direction: column;
+        }
     }
 
     &_contact {
+        display: flex;
         width: 550px;
-        gap: 22px 217px;
+        gap: 22px;
+
+        @include media(767) {
+            display: none;
+        }
+
         span {
             font-size: 18px;
             font-weight: 400;
@@ -1201,6 +1278,11 @@ section {
     }
 
     &_bottom {
+        display: flex;
+
+        @include media(769) {
+            display: none;
+        }
 
         .footer_text {
             gap: 25px;
@@ -1243,6 +1325,80 @@ section {
             gap: 21px;
         }
         
+    }
+
+    .media_center {
+        display: none;
+        align-items: start;
+
+        .footer_contact {
+            width: auto;
+        }
+
+        .footer_social {
+            width: auto;
+            gap: 22px 27px;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+
+            @include media(765) {
+                width: 100%;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+
+        span {
+            color: #6F5E91;
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        a , address{
+            font-size: 18px;
+            line-height: 22px;
+        }
+
+        @include media(769) {
+            display: flex;
+        }
+
+        @include media(765) {
+            flex-direction: column;
+            gap: 35px;
+
+        }
+    }
+
+    .media_bottom {
+        display: none;
+        margin-top: 40px;
+
+        p,
+        span {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+            color: $color-gray-200;
+            display: inline;
+
+            a {
+                display: inline;
+                text-decoration: underline;
+            }
+        }
+
+        span {
+            font-weight: 700;
+        }
+
+        @include media(769) {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
     }
 }
 // footer
@@ -1427,10 +1583,24 @@ section {
     .fs-h2 {
         text-transform: uppercase;
         margin-bottom: 25px;
+
+        @include media(1201) {
+            font-size: 32px;
+            line-height: 36px;
+        }
+
+        @include media(577) {
+            font-size: 28px;
+            line-height: 31px;
+        }
     }
 
     .accordion {
         gap: 20px;
+
+        @include media(1201) {
+            gap: 10px;
+        }
 
         button {
             position: relative;
@@ -1469,7 +1639,7 @@ section {
 
         button[aria-expanded='true'] + .accordion-content {
             opacity: 1;
-            max-height: 9em;
+            max-height: 15em;
             transition: all 200ms linear;
             will-change: opacity, max-height;
         }
