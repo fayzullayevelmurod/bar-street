@@ -87,7 +87,7 @@ let quizSlider = new Swiper('.modal_quiz .swiper', {
     effect: 'fade',
 })
 
-let quizSelect = document.querySelectorAll('.modal_quiz__select li');
+let quizSelect = document.querySelectorAll('.modal_quiz__select_card');
 if (quizSelect.length) {
     quizSelect.forEach(item => {
         item.onclick = () => {
@@ -102,7 +102,7 @@ if (quizSelect.length) {
     })
 }
 
-let priceSelect = document.querySelectorAll('.modal_quiz__prices li');
+let priceSelect = document.querySelectorAll('.modal_quiz__prices_card');
 if (priceSelect.length) {
     priceSelect.forEach(item => {
         item.onclick = () => {

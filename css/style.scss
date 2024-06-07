@@ -206,6 +206,11 @@ section {
         padding: 13px 20px;
         border-radius: 10px;
         color: $color-blue-100;
+
+        @include media(991) {
+            font-size: 16px;
+            padding: 13px 20px 18px;
+        }
         
         &::placeholder {
             color: $color-gray-500;
@@ -216,6 +221,10 @@ section {
 .range_inp {
     label {
         margin-bottom: 41px;
+
+        @include media(767) {
+            font-size: 18px;
+        }
     }
 
     &__slide {
@@ -291,6 +300,18 @@ section {
         .swiper {
             width: 1020px;
 
+            @include media(1199) {
+                width: 960px;
+            }
+
+            @include media(991) {
+                width: 720px;
+            }
+
+            @include media(767) {
+                width: calc(100vw - 36px);
+            }
+
             &-slide:not(.swiper-slide-active) {
                 height: 0;
                 overflow: hidden;
@@ -306,9 +327,30 @@ section {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+
+            @include media(1199) {
+                width: 960px;
+                min-height: 673px;
+                padding: 38px 60px;
+            }
+
+            @include media(991) {
+                width: 720px;
+                min-height: 577px;
+                padding: 30px;
+                border-radius: 20px;
+            }
+
+            @include media(767) {
+                width: calc(100vw - 36px);
+                min-height: 778px;
+                padding: 36px 20px 30px;
+            }
         }
 
         &_foot {
+            gap: 10px;
+
             button {
                 width: 196px;
                 height: 47px;
@@ -316,6 +358,15 @@ section {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+
+                @include media(767) {
+                    width: 100% !important;
+                }
+            }
+
+            .btn-red {
+                width: auto;
+                padding: 0 67px;
             }
         }
     }
@@ -323,6 +374,11 @@ section {
     &__subtitle {
         color: $color-blue-100;
         margin-bottom: 30px;
+
+        @include media(767) {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
     }
 }
 // Main modal end
@@ -335,6 +391,10 @@ section {
         h3 {
             color: $color-red-100;
             margin-bottom: 30px;
+
+            @include media(767) {
+                margin-bottom: 20px;
+            }
         }
 
         .range_inp {
@@ -343,10 +403,22 @@ section {
     }
 
     &__select {
-        gap: 20px;
+        &_wrap {
+            @include media(991) {
+                height: 341px;
+                overflow-y: scroll;
 
-        li {
-            width: calc(25% - 15px);
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+            }
+
+            @include media(767) {
+                height: 437px;
+            }
+        }
+
+        &_card {
             box-shadow: 0 4px 20px rgba(170, 170, 170, 0.2);
             border-radius: 10px;
             text-align: center;
@@ -357,15 +429,40 @@ section {
             cursor: pointer;
             border: 2px solid transparent;
 
+            @include media(1199) {
+                min-height: 183px;
+                padding-top: 30px;
+            }
+
+            @include media(767) {
+                min-height: 148px;
+            }
+
             img {
                 width: 100%;
                 height: 119px;
                 object-fit: contain;
+
+                @include media(1199) {
+                    height: 106px;
+                }
+
+                @include media(767) {
+                    height: 87px;
+                }
             }
 
-            &:nth-child(1) {
+            &.first {
                 img {
                     height: 105px;
+
+                    @include media(1199) {
+                        height: 93px;
+                    }
+
+                    @include media(767) {
+                        height: 64px;
+                    }
                 }
             }
 
@@ -374,6 +471,19 @@ section {
                 bottom: 18px;
                 left: 18px;
                 width: calc(100% - 36px);
+
+                @include media(1199) {
+                    bottom: 15px;
+                    left: 10px;
+                    width: calc(100% - 20px);
+                }
+
+                @include media(767) {
+                    bottom: 10px;
+                    left: 6px;
+                    width: calc(100% + 12px);
+                    font-size: 14px;
+                }
             }
 
             &.active {
@@ -383,10 +493,7 @@ section {
     }
 
     &__prices {
-        gap: 20px;
-
-        li {
-            width: calc(100% / 3 - 40px / 3);
+        &_card {
             background: $color-gray-200;
             padding: 12px 38px 27px;
             text-align: center;
@@ -394,16 +501,59 @@ section {
             cursor: pointer;
             user-select: none;
 
+            @include media(991) {
+                padding: 15px 11px 38px;
+            }
+
+            @include media(767) {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                padding: 12px 20px;
+            }
+
             img {
+                margin-bottom: 10px;
+
+                @include media(991) {
+                    height: 39px;
+                }
+
+                @include media(767) {
+                    height: 30px;
+                }
+
                 &.active {
                     display: none;
                     margin-bottom: 10px;
+
+                    @include media(767) {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            p {
+                @include media(991) {
+                    font-size: 16px;
+                }
+
+                @include media(767) {
+                    text-align: left;
+                }
+
+                @include media(450) {
+                    line-height: 100% !important;
                 }
             }
 
             .price {
                 display: none;
                 margin-top: 10px;
+
+                @include media(767) {
+                    margin-top: 5px;
+                }
             }
 
             &.active {
@@ -430,18 +580,44 @@ section {
             background: $color-gray-200;
             border-radius: 10px;
             padding: 14px 20px 12px;
+
+            @include media(450) {
+                flex-direction: column !important;
+                padding: 14px 20px 20px;
+            }
         }
 
         ul {
             gap: 3px;
+
+            @include media(450) {
+                width: 100%;
+                border-bottom: 1px solid #E3E3E3;
+                padding-bottom: 5px;
+                margin-bottom: 16px;
+            }
+
+            li {
+                @include media(1199) {
+                    font-size: 14px;
+                }
+            }
         }
 
         h4 {
             color: $color-red-100;
+
+            @include media(450) {
+                width: 100%;
+            }
         }
 
         p {
             margin: 10px 0 20px;
+
+            @include media(991) {
+                font-size: 14px;
+            }
         }
     }
 
@@ -450,8 +626,24 @@ section {
         padding-top: 20px;
         margin-bottom: 18px;
 
+        @include media(991) {
+            gap: 10px;
+        }
+
+        @include media(767) {
+            margin-bottom: 10px;
+        }
+
         label {
             margin-bottom: 10px;
+
+            @include media(991) {
+                font-size: 18px;
+            }
+        }
+
+        @include media(991) {
+            margin-top: 10px;
         }
     }
 

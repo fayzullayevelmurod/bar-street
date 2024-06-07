@@ -55,7 +55,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="w-100 d-flex align-items-center justify-content-between main_modal__content_foot">
+                                <div class="w-100 d-flex flex-column flex-md-row align-items-center justify-content-between main_modal__content_foot">
                                     <button class="btn-gray font-m-plus-1p fs-p2 fw-medium">Назад</button>
                                     <button class="btn-red font-m-plus-1p fs-p2 fw-medium">Далее</button>
                                 </div>
@@ -69,42 +69,60 @@
                                 <div>
                                     <p class="fs-p2 main_modal__subtitle">Пройдите пошаговую форму и получите расчёт стоимости заказа</p>
                                     <h3 class="fs-p1 fw-bold text-uppercase">шаг 2: выберите барную стойку</h3>
-                                    <ul class="d-flex flex-wrap modal_quiz__select">
-                                        <li>
-                                            <img src="./images/quiz-select-1.png" alt="">
-                                            <p class="fs-p4 fw-bold">Без барной стойки</p>
-                                        </li>
-                                        <li>
-                                            <img src="./images/quiz-select-2.png" alt="">
-                                            <p class="fs-p4 fw-bold">Барная стойка Эко</p>
-                                        </li>
-                                        <li>
-                                            <img src="./images/quiz-select-3.png" alt="">
-                                            <p class="fs-p4 fw-bold">Кожаная барная стойка</p>
-                                        </li>
-                                        <li>
-                                            <img src="./images/quiz-select-4.png" alt="">
-                                            <p class="fs-p4 fw-bold">Брендированная барная стойка</p>
-                                        </li>
-                                        <li>
-                                            <img src="./images/quiz-select-5.png" alt="">
-                                            <p class="fs-p4 fw-bold">Барная стойка с подсветкой</p>
-                                        </li>
-                                        <li>
-                                            <img src="./images/quiz-select-6.png" alt="">
-                                            <p class="fs-p4 fw-bold">Круглая барная стойка</p>
-                                        </li>
-                                        <li>
-                                            <img src="./images/quiz-select-7.png" alt="">
-                                            <p class="fs-p4 fw-bold">Белая разборная барная стойка</p>
-                                        </li>
-                                        <li class="active">
-                                            <img src="./images/quiz-select-8.png" alt="">
-                                            <p class="fs-p4 fw-bold">Барная стойка Суджи Бан</p>
-                                        </li>
-                                    </ul>
+                                    <div class="modal_quiz__select_wrap">
+                                        <div class="row row-gap-4 modal_quiz__select">
+                                            <div class="col-6 col-md-4 col-lg-3">
+                                                <div class="modal_quiz__select_card first">
+                                                    <img src="./images/quiz-select-1.png" alt="">
+                                                    <p class="fs-p4 fw-bold">Без барной стойки</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4 col-lg-3">
+                                                <div class="modal_quiz__select_card">
+                                                    <img src="./images/quiz-select-2.png" alt="">
+                                                    <p class="fs-p4 fw-bold">Барная стойка Эко</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4 col-lg-3">
+                                                <div class="modal_quiz__select_card">
+                                                    <img src="./images/quiz-select-3.png" alt="">
+                                                    <p class="fs-p4 fw-bold">Кожаная барная стойка</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4 col-lg-3">
+                                                <div class="modal_quiz__select_card">
+                                                    <img src="./images/quiz-select-4.png" alt="">
+                                                    <p class="fs-p4 fw-bold">Брендированная барная стойка</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4 col-lg-3">
+                                                <div class="modal_quiz__select_card">
+                                                    <img src="./images/quiz-select-5.png" alt="">
+                                                    <p class="fs-p4 fw-bold">Барная стойка с подсветкой</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4 col-lg-3">
+                                                <div class="modal_quiz__select_card">
+                                                    <img src="./images/quiz-select-6.png" alt="">
+                                                    <p class="fs-p4 fw-bold">Круглая барная стойка</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4 col-lg-3">
+                                                <div class="modal_quiz__select_card">
+                                                    <img src="./images/quiz-select-7.png" alt="">
+                                                    <p class="fs-p4 fw-bold">Белая разборная барная стойка</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-4 col-lg-3">
+                                                <div class="modal_quiz__select_card active">
+                                                    <img src="./images/quiz-select-8.png" alt="">
+                                                    <p class="fs-p4 fw-bold">Барная стойка Суджи Бан</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="w-100 d-flex align-items-center justify-content-between main_modal__content_foot">
+                                <div class="w-100 d-flex flex-column flex-md-row align-items-center justify-content-between main_modal__content_foot">
                                     <button class="btn-gray font-m-plus-1p fs-p2 fw-medium">Назад</button>
                                     <button class="btn-red font-m-plus-1p fs-p2 fw-medium">Далее</button>
                                 </div>
@@ -112,32 +130,44 @@
                         </div>
                         <!-- Step 2 end -->
 
-                        <!-- Step 2 -->
+                        <!-- Step 3 -->
                         <div class="swiper-slide">
                             <div class="main_modal__content_in modal_quiz__content">
                                 <div>
                                     <p class="fs-p2 main_modal__subtitle">Пройдите пошаговую форму и получите расчёт стоимости заказа</p>
                                     <h3 class="fs-p1 fw-bold text-uppercase">шаг 3: выберите вариант работы бара</h3>
-                                    <ul class="d-flex flex-wrap align-items-start modal_quiz__prices">
-                                        <li>
-                                            <img src="./images/price-select-1.svg" alt="">
-                                            <img src="./images/price-select-1-active.svg" class="active" alt="">
-                                            <p class="fs-p3 fw-bold">Один коктейль на человека за мероприятие</p>
-                                            <p class="fs-p3 price">Итого: 800 коктейлей</p>
-                                        </li>
-                                        <li class="active">
-                                            <img src="./images/price-select-2.svg" alt="">
-                                            <img src="./images/price-select-2-active.svg" class="active" alt="">
-                                            <p class="fs-p3 fw-bold">Два коктейля на человека за мероприятие</p>
-                                            <p class="fs-p3 price">Итого: 800 коктейлей</p>
-                                        </li>
-                                        <li>
-                                            <img src="./images/price-select-3.svg" alt="">
-                                            <img src="./images/price-select-3-active.svg" class="active" alt="">
-                                            <p class="fs-p3 fw-bold">Один коктейль в час на человека</p>
-                                            <p class="fs-p3 price">Итого: 800 коктейлей</p>
-                                        </li>
-                                    </ul>
+                                    <div class="row row-gap-2 modal_quiz__prices">
+                                        <div class="col-12 col-md-4">
+                                            <div class="modal_quiz__prices_card">
+                                                <img src="./images/price-select-1.svg" alt="">
+                                                <img src="./images/price-select-1-active.svg" class="active" alt="">
+                                                <div>
+                                                    <p class="fs-p3 fw-bold">Один коктейль на человека за мероприятие</p>
+                                                    <p class="fs-p3 price">Итого: 800 коктейлей</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-4">
+                                            <div class="modal_quiz__prices_card active">
+                                                <img src="./images/price-select-2.svg" alt="">
+                                                <img src="./images/price-select-2-active.svg" class="active" alt="">
+                                                <div>
+                                                    <p class="fs-p3 fw-bold">Два коктейля на человека за мероприятие</p>
+                                                    <p class="fs-p3 price">Итого: 800 коктейлей</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-4">
+                                            <div class="modal_quiz__prices_card">
+                                                <img src="./images/price-select-3.svg" alt="">
+                                                <img src="./images/price-select-3-active.svg" class="active" alt="">
+                                                <div>
+                                                    <p class="fs-p3 fw-bold">Один коктейль в час на человека</p>
+                                                    <p class="fs-p3 price">Итого: 800 коктейлей</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="w-100 main_modal__content_foot modal_quiz__foot">
                                     <div class="d-flex align-items-center justify-content-between price_wrap">
@@ -148,8 +178,8 @@
                                         </ul>
                                         <h4 class="fs-p2 fw-bold">Итого: 148 500 руб</h4>
                                     </div>
-                                    <p class="fs-p4 text-end">Цены приблизительные, окончательный расчет произведет менеджер </p>
-                                    <div class="d-flex align-items-center justify-content-between">
+                                    <p class="fs-p4 text-start text-md-end">Цены приблизительные, окончательный расчет произведет менеджер </p>
+                                    <div class="d-flex flex-column flex-md-row align-items-center justify-content-between main_modal__content_foot">
                                         <button class="btn-gray font-m-plus-1p fs-p2 fw-medium">Назад</button>
                                         <button class="btn-red font-m-plus-1p fs-p2 fw-medium">Далее</button>
                                     </div>
@@ -187,9 +217,9 @@
                                         </span>
                                     </label>
                                 </div>
-                                <div class="w-100 d-flex align-items-center justify-content-between main_modal__content_foot ">
+                                <div class="w-100 d-flex flex-column flex-md-row align-items-center justify-content-between main_modal__content_foot ">
                                     <button class="btn-gray font-m-plus-1p fs-p2 fw-medium">Назад</button>
-                                    <button class="btn-red font-m-plus-1p fs-p2 fw-medium">Далее</button>
+                                    <button class="btn-red font-m-plus-1p fs-p2 fw-medium">Оставить заявку</button>
                                 </div>
                             </div>
                         </div>
@@ -202,7 +232,7 @@
         <!-- Quiz modal end -->
 
         <!-- Quiz modal -->
-        <div class="main_modal modal_order ">
+        <div class="main_modal modal_order">
             <div class="main_modal__bg"></div>
             <div class="main_modal__content">
                 <div class="swiper">
@@ -425,7 +455,7 @@
                     </li>
                 </ul>
                 <div class="d-none d-lg-flex align-items-end align-items-xl-center header__right">
-                    <a href="#" class="d-xl-none">
+                    <a href="#" class="d-xl-none modal_quiz__open">
                         <img src="./images/phone-icon.svg" alt="">
                     </a>
                     <div class="d-flex align-items-end flex-column header__right_text">
@@ -516,7 +546,7 @@
                 <div class="container d-flex flex-column align-items-center d-xl-block home__container">
                     <h1 class="fs-h1 fw-bold text-white text-center text-md-start home__title">МОБИЛЬНЫЙ ВЫЕЗДНОЙ БАР</h1>
                     <p class="fs-h6 text-center text-xl-start">Сделаем бар с любимыми профессиональными <br> коктейлями на вашем мероприятии.</p>
-                    <a href="#" class="fs-p2 btn-red">Заказать</a>
+                    <a href="#" class="fs-p2 btn-red modal_quiz__open">Заказать</a>
                 </div>
             </section>
             <!-- Home end -->
