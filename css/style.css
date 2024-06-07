@@ -606,7 +606,28 @@ section {
   max-width: 513px;
   text-transform: uppercase;
 }
-.partner .partner_title button {
+@media screen and (max-width: 1201px) {
+  .partner .partner_title .fs-h2 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+@media screen and (max-width: 577px) {
+  .partner .partner_title .fs-h2 {
+    font-size: 28px;
+    line-height: 31px;
+  }
+}
+.partner .partner_title .partner_btns {
+  gap: 25px;
+  display: none;
+}
+@media screen and (max-width: 1201px) {
+  .partner .partner_title .partner_btns {
+    display: flex;
+  }
+}
+.partner .partner_title .title_desktop_btn {
   color: #000000;
   border-radius: 10px;
   padding: 13px 46px 14px;
@@ -615,10 +636,18 @@ section {
   font-weight: 500;
   border: 1px solid #070707;
 }
+@media screen and (max-width: 1201px) {
+  .partner .partner_title .title_desktop_btn {
+    display: none;
+  }
+}
 .partner .partner_card {
   border-radius: 30px;
   overflow: hidden;
   background: #F5F5F5;
+}
+.partner .partner_card img {
+  width: 100%;
 }
 .partner .partner_card .partner_card_text {
   display: flex;
@@ -638,6 +667,28 @@ section {
   line-height: 28.6px;
   color: #000000;
 }
+@media screen and (max-width: 1201px) {
+  .partner .partner_slider .desktop_btn {
+    display: none;
+  }
+}
+.partner .slider_media_btn {
+  display: none;
+  color: #000000;
+  border-radius: 10px;
+  padding: 13px 46px 14px;
+  font-family: "M PLUS 1p", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  border: 1px solid #070707;
+  margin-top: 20px;
+}
+@media screen and (max-width: 1201px) {
+  .partner .slider_media_btn {
+    display: flex;
+    margin: 20px auto 0;
+  }
+}
 .partner .partner_btn {
   min-width: 50px;
   min-height: 50px;
@@ -645,6 +696,18 @@ section {
 
 .clients .fs-h2 {
   text-transform: uppercase;
+}
+@media screen and (max-width: 1201px) {
+  .clients .fs-h2 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+@media screen and (max-width: 577px) {
+  .clients .fs-h2 {
+    font-size: 28px;
+    line-height: 31px;
+  }
 }
 .clients .clients_title {
   margin-bottom: 16px;
@@ -668,7 +731,7 @@ section {
 .comment .comment_title {
   margin-bottom: 25px;
 }
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1201px) {
   .comment .comment_title {
     flex-direction: column;
     gap: 11px;
@@ -676,6 +739,18 @@ section {
 }
 .comment .comment_title .fs-h2 {
   text-transform: uppercase;
+}
+@media screen and (max-width: 1201px) {
+  .comment .comment_title .fs-h2 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+@media screen and (max-width: 577px) {
+  .comment .comment_title .fs-h2 {
+    font-size: 28px;
+    line-height: 31px;
+  }
 }
 .comment .comment_title p {
   max-width: 491px;
@@ -685,17 +760,17 @@ section {
   letter-spacing: 0.01em;
   color: #000000;
 }
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1201px) {
   .comment .comment_title p {
     max-width: 871px;
   }
 }
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1201px) {
   .comment .desktop_btn {
     display: none;
   }
 }
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1201px) {
   .comment .comment_slider {
     flex-direction: column;
     gap: 25px;
@@ -705,7 +780,7 @@ section {
   display: none;
   gap: 25px;
 }
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1201px) {
   .comment .comment_media_btns {
     display: flex;
   }
@@ -767,6 +842,13 @@ section {
   color: #F5F5F5;
   margin-bottom: 10px;
 }
+@media screen and (max-width: 577px) {
+  .contact h3 {
+    font-size: 28px;
+    line-height: 35px;
+    margin-bottom: 15px;
+  }
+}
 .contact p {
   margin: 0 auto 46px auto;
   max-width: 692px;
@@ -775,6 +857,13 @@ section {
   line-height: 27.5px;
   color: #F5F5F5;
 }
+@media screen and (max-width: 577px) {
+  .contact p {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 30px;
+  }
+}
 .contact form {
   gap: 20px;
 }
@@ -782,6 +871,11 @@ section {
   .contact form {
     flex-direction: column;
     align-items: center;
+  }
+}
+@media screen and (max-width: 577px) {
+  .contact form {
+    gap: 10px;
   }
 }
 .contact input {
@@ -799,6 +893,11 @@ section {
     width: 400px;
   }
 }
+@media screen and (max-width: 577px) {
+  .contact input {
+    width: 100%;
+  }
+}
 .contact button {
   width: 296px;
 }
@@ -807,12 +906,23 @@ section {
     width: 400px;
   }
 }
+@media screen and (max-width: 577px) {
+  .contact button {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
 .contact span {
   font-size: 14px;
   font-weight: 400;
   line-height: 18.12px;
   color: #888888;
   margin-top: 20px;
+}
+@media screen and (max-width: 577px) {
+  .contact span {
+    margin-top: 15px;
+  }
 }
 
 .footer {
@@ -1059,6 +1169,10 @@ section {
 .faq .accordion .accordion_item {
   border-radius: 20px;
   background: #F5F5F5;
+}
+.faq .accordion .accordion_item .icon {
+  min-width: 50px;
+  min-height: 50px;
 }
 .faq .accordion button .accordion-title {
   font-size: 20px;

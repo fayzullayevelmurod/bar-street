@@ -17,25 +17,47 @@ let swiper = new Swiper(".commentSwiper", {
 
 // partner slider
 let swiper2 = new Swiper(".partnerSwiper", {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 20,
     loop: true,
     navigation: {
       nextEl: ".partner-button-next",
       prevEl: ".partner-button-prev",
     },
+    breakpoints: {
+        769: {
+            slidesPerView: 2,
+          },
+        993: {
+            slidesPerView: 3,
+          },
+    }
 });
 // partner slider
 
 // clients slider
 let swiper3 = new Swiper(".clientsSwiper", {
-    slidesPerView: 7,
+    slidesPerView: 3,
     spaceBetween: 30,
     loop: true,
     navigation: {
       nextEl: ".clients-button-next",
       prevEl: ".clients-button-prev",
     },
+    breakpoints: {
+        577: {
+            slidesPerView: 4,
+          },
+        769: {
+            slidesPerView: 5,
+          },
+        993: {
+            slidesPerView: 6,
+          },
+        1201: {
+          slidesPerView: 7,
+        },
+      },
 });
 // clients slider
 

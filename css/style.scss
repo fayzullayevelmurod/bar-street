@@ -772,9 +772,28 @@ section {
         .fs-h2 {
             max-width: 513px;
             text-transform: uppercase;
+
+            @include media(1201) {
+                font-size: 32px;
+                line-height: 36px;
+            }
+
+            @include media(577) {
+                font-size: 28px;
+                line-height: 31px;
+            }
         }
 
-        button{
+        .partner_btns {
+            gap: 25px;
+            display: none;
+
+            @include media(1201) {
+                display: flex;
+            }
+        }
+
+        .title_desktop_btn {
             color: #000000;
             border-radius: 10px;
             padding: 13px 46px 14px;
@@ -782,6 +801,10 @@ section {
             font-size: 20px;
             font-weight: 500;
             border: 1px solid $color-dark-100;
+
+            @include media(1201) {
+                display: none;
+            }
         }
     }
 
@@ -789,6 +812,10 @@ section {
         border-radius: 30px;
         overflow: hidden;
         background: #F5F5F5;
+
+        img {
+            width: 100%;
+        }
 
         .partner_card_text {
             display: flex;
@@ -812,6 +839,31 @@ section {
         }
     }
 
+    .partner_slider {
+        .desktop_btn {
+            @include media(1201) {
+                display: none;
+            }
+        }
+    }
+
+    .slider_media_btn {
+        display: none;
+        color: #000000;
+        border-radius: 10px;
+        padding: 13px 46px 14px;
+        font-family: $font-m-plus-1p;
+        font-size: 20px;
+        font-weight: 500;
+        border: 1px solid $color-dark-100;
+        margin-top: 20px;
+
+        @include media(1201) {
+            display: flex;
+            margin: 20px auto 0;
+        }
+    }
+
     .partner_btn {
         min-width: 50px;
         min-height: 50px;
@@ -823,6 +875,16 @@ section {
 .clients {
     .fs-h2 {
         text-transform: uppercase;
+
+        @include media(1201) {
+            font-size: 32px;
+            line-height: 36px;
+        }
+
+        @include media(577) {
+            font-size: 28px;
+            line-height: 31px;
+        }
     }
 
     .clients_title {
@@ -856,13 +918,23 @@ section {
     .comment_title {
         margin-bottom: 25px;
 
-        @include media(1250) {
+        @include media(1201) {
             flex-direction: column;
             gap: 11px;
         }
 
         .fs-h2 {
             text-transform: uppercase;
+
+            @include media(1201) {
+                font-size: 32px;
+                line-height: 36px;
+            }
+
+            @include media(577) {
+                font-size: 28px;
+                line-height: 31px;
+            }
         }
 
         p {
@@ -873,20 +945,20 @@ section {
             letter-spacing: 0.01em;
             color: #000000;
 
-            @include media(1250) {
+            @include media(1201) {
                 max-width: 871px;
             }
         }
     }
 
     .desktop_btn {
-        @include media(1250) {
+        @include media(1201) {
             display: none;
         }
     }
 
     .comment_slider {
-        @include media(1250) {
+        @include media(1201) {
             flex-direction: column;
             gap: 25px;
         }
@@ -896,7 +968,7 @@ section {
         display: none;
         gap: 25px;
 
-        @include media(1250) {
+        @include media(1201) {
             display: flex;
         }
     }
@@ -969,6 +1041,12 @@ section {
         line-height: 40px;
         color: $color-gray-200;
         margin-bottom: 10px;
+
+        @include media(577) {
+            font-size: 28px;
+            line-height: 35px;
+            margin-bottom: 15px;
+        }
     }
 
     p {
@@ -978,6 +1056,12 @@ section {
         font-weight: 400;
         line-height: 27.5px;    
         color: $color-gray-200;
+
+        @include media(577) {
+            font-size: 18px;
+            line-height: 22px;
+            margin-bottom: 30px;
+        }
     }
 
     form {
@@ -986,6 +1070,10 @@ section {
         @include media(769) {
             flex-direction: column;
             align-items: center;
+        }
+
+        @include media(577) {
+            gap: 10px;
         }
     }
 
@@ -1002,6 +1090,10 @@ section {
         @include media(769) {
             width: 400px;
         }
+
+        @include media(577) {
+            width: 100%;
+        }
     }
 
     button {
@@ -1009,6 +1101,11 @@ section {
 
         @include media(769) {
             width: 400px;
+        }
+
+        @include media(577) {
+            width: 100%;
+            margin-top: 15px;
         }
     }
 
@@ -1018,6 +1115,10 @@ section {
         line-height: 18.12px;
         color: $color-gray-300;
         margin-top: 20px;
+
+        @include media(577) {
+            margin-top: 15px;
+        }
     }
 }
 // contact
@@ -1347,6 +1448,11 @@ section {
         .accordion_item{
             border-radius: 20px;
             background: #F5F5F5;
+
+            .icon {
+                min-width: 50px;
+                min-height: 50px;
+            }
         }
     
         button .accordion-title {
