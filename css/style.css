@@ -228,7 +228,7 @@ section {
   display: none;
   align-items: center;
   justify-content: center;
-  z-index: 5;
+  z-index: 10;
 }
 .main_modal.active {
   display: flex;
@@ -620,7 +620,7 @@ section {
 }
 
 .header {
-  z-index: 3;
+  z-index: 5;
   background: #110936;
 }
 .header__container {
@@ -710,7 +710,7 @@ section {
 
 .menu {
   position: fixed;
-  z-index: 2;
+  z-index: 4;
   background: white;
   left: 0;
   top: 98px;
