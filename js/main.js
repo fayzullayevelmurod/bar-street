@@ -4,13 +4,13 @@ let swiper = new Swiper(".commentSwiper", {
     spaceBetween: 20,
     loop: true,
     navigation: {
-      nextEl: ".comment-button-next",
-      prevEl: ".comment-button-prev",
+        nextEl: ".comment-button-next",
+        prevEl: ".comment-button-prev",
     },
     breakpoints: {
-      993: {
-        slidesPerView: 2,
-      },
+        993: {
+            slidesPerView: 2,
+        },
     },
 });
 // comment slider
@@ -21,8 +21,8 @@ let swiper2 = new Swiper(".partnerSwiper", {
     spaceBetween: 20,
     loop: true,
     navigation: {
-      nextEl: ".partner-button-next",
-      prevEl: ".partner-button-prev",
+        nextEl: ".partner-button-next",
+        prevEl: ".partner-button-prev",
     },
     breakpoints: {
         769: {
@@ -41,8 +41,8 @@ let swiper3 = new Swiper(".clientsSwiper", {
     spaceBetween: 30,
     loop: true,
     navigation: {
-      nextEl: ".clients-button-next",
-      prevEl: ".clients-button-prev",
+        nextEl: ".clients-button-next",
+        prevEl: ".clients-button-prev",
     },
     breakpoints: {
         577: {
@@ -65,15 +65,15 @@ let swiper3 = new Swiper(".clientsSwiper", {
 const items = document.querySelectorAll('.accordion button');
 
 function toggleAccordion() {
-  const itemToggle = this.getAttribute('aria-expanded');
+    const itemToggle = this.getAttribute('aria-expanded');
 
-  for (i = 0; i < items.length; i++) {
-    items[i].setAttribute('aria-expanded', 'false');
-  }
+    for (i = 0; i < items.length; i++) {
+        items[i].setAttribute('aria-expanded', 'false');
+    }
 
-  if (itemToggle == 'false') {
-    this.setAttribute('aria-expanded', 'true');
-  }
+    if (itemToggle == 'false') {
+        this.setAttribute('aria-expanded', 'true');
+    }
 }
 
 items.forEach((item) => item.addEventListener('click', toggleAccordion));
@@ -104,12 +104,11 @@ if (rangeInp.length) {
 
 let quizSlider = new Swiper('.modal_quiz .swiper', {
     slidesPerView: 1,
-    // initialSlide: 3,
-    // allowTouchMove: false,
+    allowTouchMove: false,
     effect: 'fade',
 })
 
-let quizSelect = document.querySelectorAll('.modal_quiz__select li');
+let quizSelect = document.querySelectorAll('.modal_quiz__select_card');
 if (quizSelect.length) {
     quizSelect.forEach(item => {
         item.onclick = () => {
@@ -124,7 +123,7 @@ if (quizSelect.length) {
     })
 }
 
-let priceSelect = document.querySelectorAll('.modal_quiz__prices li');
+let priceSelect = document.querySelectorAll('.modal_quiz__prices_card');
 if (priceSelect.length) {
     priceSelect.forEach(item => {
         item.onclick = () => {
@@ -152,7 +151,7 @@ quizModalOpen.forEach(el => {
     }
 })
 
-function allModalclose () {
+function allModalclose() {
     document.body.style.overflow = 'visible'
     mainModal.forEach(modal => {
         modal.classList.remove('active');
@@ -194,7 +193,7 @@ let menuSlider = new Swiper('.menu .swiper', {
 })
 let menu = document.querySelector('.menu')
 
-function toggleMenu () {
+function toggleMenu() {
     if (window.scrollY > 300) {
         menu.classList.add('active')
     } else {
@@ -212,7 +211,7 @@ let cocktailList = document.querySelectorAll('.cocktail__card'),
     cocktailShowMore = document.querySelector('.cocktail .btn-red'),
     cocktailLength = 10;
 
-function sortCocktailList () {
+function sortCocktailList() {
     cocktailList.forEach((el, idx) => {
         if (idx + 1 <= cocktailLength) {
             el.classList.add('active');
@@ -229,3 +228,56 @@ cocktailShowMore.onclick = e => {
     cocktailLength += 5;
     sortCocktailList();
 }
+
+let orderSwiper = new Swiper('.modal_order .swiper', {
+    slidesPerView: 1,
+    effect: 'fade',
+})
+
+var init = false;
+var swiper4;
+function swiperCard() {
+    if (window.innerWidth <= 1399) {
+        if (!init) {
+            init = true;
+            swiper4 = new Swiper(".cocktail .swiper", {
+                slidesPerView: 2,
+                grid: {
+                    rows: 2,
+                },
+                spaceBetween: 10,
+                breakpoints: {
+                    1199: {
+                        slidesPerView: 4,
+                        spaceBetween: 20,
+                        grid: {
+                            rows: 2,
+                        },
+                    },
+                    991: {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                        grid: {
+                            rows: 2,
+                        },
+                    },
+                    767: {
+                        spaceBetween: 20,
+                        grid: {
+                            rows: 2,
+                        },
+                    }
+                },
+                navigation: {
+                    nextEl: ".cocktail .swp_btn__next",
+                    prevEl: ".cocktail .swp_btn__prev"
+                }
+            });
+        }
+    } else if (init) {
+        swiper4.destroy();
+        init = false;
+    }
+}
+swiperCard();
+window.addEventListener("resize", swiperCard);
