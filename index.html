@@ -204,7 +204,7 @@
                                         </div>
                                         <div>
                                             <label for="" class="fs-p1 fw-bold">Ваш телефон*</label>
-                                            <input type="text" placeholder="+7 (999) 999-99-99" class="inp-gray">
+                                            <input type="tel" placeholder="+7 (999) 999-99-99" class="inp-gray">
                                         </div>
                                     </div>
                                     <label for="checkbox_1" class="d-flex align-items-center modal_quiz__checkbox">
@@ -231,7 +231,7 @@
         </div>
         <!-- Quiz modal end -->
 
-        <!-- Quiz modal -->
+        <!-- Order modal -->
         <div class="main_modal modal_order">
             <div class="main_modal__bg"></div>
             <div class="main_modal__content">
@@ -242,10 +242,101 @@
                         <div class="swiper-slide">
                             <div class="main_modal__content_in modal_order__content">
                                 <div>
-                                    <p class="fs-p2 main_modal__subtitle">Пройдите пошаговую форму и получите расчёт стоимости заказа</p>
-                                    <h3 class="fs-p1 fw-bold text-uppercase">шаг 1: укажите количество</h3>
+                                    <p class="fs-p2 main_modal__subtitle">Здесь хранятся заказы, которые вы добавили в корзину</p>
+                                    <h3 class="fs-p1 fw-bold text-uppercase">ваш заказ</h3>
+                                    <div class="row d-none d-md-flex order_card__head">
+                                        <div class="col-4">
+                                            <p class="fs-p3">Наименование</p>
+                                        </div>
+                                        <div class="col-2">
+                                            <p class="fs-p3 text-center">Цена</p>
+                                        </div>
+                                        <div class="col-2">
+                                            <p class="fs-p3 text-center">Количество</p>
+                                        </div>
+                                        <div class="col-3">
+                                            <p class="fs-p3 text-center">Сумма</p>
+                                        </div>
+                                        <div class="col-1"></div>
+                                    </div>
+                                    
+                                    <div class="order_card">
+                                        <div class="row align-items-center order_card__item">
+                                            <div class="col-9 col-md-4 order-1 order-md-1">
+                                                <div class="d-flex align-items-center text_left">
+                                                    <img src="./images/cocktail-sm.png" width="57" alt="">
+                                                    <div>
+                                                        <h3 class="fs-p3 fw-bold">Белый холодок</h3>
+                                                        <p class="fs-p3">200 мл</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-2 order-3 order-md-2">
+                                                <p class="fs-p3 text-start text-md-center font-m-plus-1p order_price">350 руб</p>
+                                            </div>
+                                            <div class="col-8 col-md-2 order-4 order-md-3">
+                                                <div class="d-flex align-items-center justify-content-center calculate">
+                                                    <button class="minus">-</button>
+                                                    <span>100</span>
+                                                    <button class="plus">+</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 col-md-3 order-5 order-md-4">
+                                                <p class="fs-p3 text-end text-md-center all_price">35 000 руб</p>
+                                            </div>
+                                            <div class="col-3 col-md-1 order-2 order-md-5">
+                                                <div class="d-flex justify-content-end d-md-block">
+                                                    <a href="#">
+                                                        <img src="./images/delete-icon.svg" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row align-items-center order_card__item">
+                                            <div class="col-9 col-md-4 order-1 order-md-1">
+                                                <div class="d-flex align-items-center text_left">
+                                                    <img src="./images/cocktail-sm.png" width="57" alt="">
+                                                    <div>
+                                                        <h3 class="fs-p3 fw-bold">Белый холодок</h3>
+                                                        <p class="fs-p3">200 мл</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-2 order-3 order-md-2">
+                                                <p class="fs-p3 text-start text-md-center font-m-plus-1p order_price">350 руб</p>
+                                            </div>
+                                            <div class="col-8 col-md-2 order-4 order-md-3">
+                                                <div class="d-flex align-items-center justify-content-center calculate">
+                                                    <button class="minus">-</button>
+                                                    <span>100</span>
+                                                    <button class="plus">+</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 col-md-3 order-5 order-md-4">
+                                                <p class="fs-p3 text-end text-md-center all_price">35 000 руб</p>
+                                            </div>
+                                            <div class="col-3 col-md-1 order-2 order-md-5">
+                                                <div class="d-flex justify-content-end d-md-block">
+                                                    <a href="#">
+                                                        <img src="./images/delete-icon.svg" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-items-start justify-content-between prices">
+                                        <div class="d-flex flex-column prices_left">
+                                            <p class="fs-p4 fw-bold">Сумма заказа: 135 000 руб</p>
+                                            <p class="fs-p4 fw-bold">Доставка: 6 000 руб</p>
+                                        </div>
+                                        <h3 class="fs-h6 fw-bold">Итого: 141 000 руб</h3>
+                                    </div>
+
+                                    <p class="fs-p4 subtitle">Цены приблизительные, окончательный расчет произведет менеджер</p>
+
                                 </div>
-                                <div class="w-100 d-flex align-items-center justify-content-between main_modal__content_foot">
+                                <div class="w-100 d-flex flex-column flex-md-row align-items-center justify-content-between main_modal__content_foot">
                                     <button class="btn-gray font-m-plus-1p fs-p2 fw-medium">Назад</button>
                                     <button class="btn-red font-m-plus-1p fs-p2 fw-medium">Далее</button>
                                 </div>
@@ -253,11 +344,60 @@
                         </div>
                         <!-- Step 1 end -->
 
+                        <!-- Step 2 -->
+                        <div class="swiper-slide">
+                            <div class="main_modal__content_in modal_order__content">
+                                <div>
+                                    <p class="fs-p2 main_modal__subtitle">Оставьте свои контактные данные, чтобы мы могли связаться с вами</p>
+                                    <div class="d-flex flex-column modal_order__form">
+                                        <div>
+                                            <label for="" class="fs-p1 fw-bold">Ваше имя*</label>
+                                            <input type="text" placeholder="Елизавета" class="inp-gray">
+                                        </div>
+                                        <div>
+                                            <label for="" class="fs-p1 fw-bold">Ваш email*</label>
+                                            <input type="email" placeholder="mail@mail.ru" class="inp-gray">
+                                        </div>
+                                        <div>
+                                            <label for="" class="fs-p1 fw-bold">Ваш телефон*</label>
+                                            <input type="tel" placeholder="+7 (999) 999-99-99" class="inp-gray">
+                                        </div>
+                                        <div>
+                                            <label for="" class="fs-p1 fw-bold">Комментарий</label>
+                                            <textarea placeholder="Введите текст" class="inp-gray"></textarea>
+                                        </div>
+                                    </div>
+                                    <label for="checkbox_2" class="d-flex d-md-none align-items-center modal_quiz__checkbox">
+                                        <input type="checkbox" name="" id="checkbox_2">
+                                        <span class="icon">
+                                            <img src="./images/check.svg" alt="">
+                                        </span>
+                                        <span class="fs-p4">
+                                            Я согласен с <a href="#">политикой конфиденциальности</a>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="w-100 d-flex flex-column flex-md-row align-items-center justify-content-between main_modal__content_foot ">
+                                    <label for="checkbox_3" class="d-none d-md-flex align-items-center modal_quiz__checkbox">
+                                        <input type="checkbox" name="" id="checkbox_3">
+                                        <span class="icon">
+                                            <img src="./images/check.svg" alt="">
+                                        </span>
+                                        <span class="fs-p4">
+                                            Я согласен с <a href="#">политикой конфиденциальности</a>
+                                        </span>
+                                    </label>
+                                    <button class="btn-red font-m-plus-1p fs-p2 fw-medium">Отправить</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Step 2 end -->
+
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Quiz modal end -->
+        <!-- Order modal end -->
         
         <!-- Header -->
         <header class="position-fixed top-0 start-0 w-100 header">
@@ -416,7 +556,7 @@
 
                     <div class="swiper">
                         <ul class="swiper-wrapper">
-                            <li class="swiper-slide cocktail__card">
+                            <li class="swiper-slide cocktail__card modal_order__open">
                                 <img src="./images/link-icon.svg" alt="" class="icon">
                                 <img src="./images/link-icon-active.svg" alt="" class="icon active">
                                 <div class="card__head">
@@ -435,7 +575,7 @@
                                     <p class="fs-p4">Водка, сахарный сироп, биттер лемон, апельсиновый ликер, лайм, дробленый лед.</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide cocktail__card">
+                            <li class="swiper-slide cocktail__card modal_order__open">
                                 <img src="./images/link-icon.svg" alt="" class="icon">
                                 <img src="./images/link-icon-active.svg" alt="" class="icon active">
                                 <div class="card__head">
@@ -454,7 +594,7 @@
                                     <p class="fs-p4">Водка, сахарный сироп, биттер лемон, апельсиновый ликер, лайм, дробленый лед.</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide cocktail__card">
+                            <li class="swiper-slide cocktail__card modal_order__open">
                                 <img src="./images/link-icon.svg" alt="" class="icon">
                                 <img src="./images/link-icon-active.svg" alt="" class="icon active">
                                 <div class="card__head">
@@ -473,7 +613,7 @@
                                     <p class="fs-p4">Водка, сахарный сироп, биттер лемон, апельсиновый ликер, лайм, дробленый лед.</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide cocktail__card">
+                            <li class="swiper-slide cocktail__card modal_order__open">
                                 <img src="./images/link-icon.svg" alt="" class="icon">
                                 <img src="./images/link-icon-active.svg" alt="" class="icon active">
                                 <div class="card__head">
@@ -492,7 +632,7 @@
                                     <p class="fs-p4">Водка, сахарный сироп, биттер лемон, апельсиновый ликер, лайм, дробленый лед.</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide cocktail__card">
+                            <li class="swiper-slide cocktail__card modal_order__open">
                                 <img src="./images/link-icon.svg" alt="" class="icon">
                                 <img src="./images/link-icon-active.svg" alt="" class="icon active">
                                 <div class="card__head">
@@ -511,7 +651,7 @@
                                     <p class="fs-p4">Водка, сахарный сироп, биттер лемон, апельсиновый ликер, лайм, дробленый лед.</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide cocktail__card">
+                            <li class="swiper-slide cocktail__card modal_order__open">
                                 <img src="./images/link-icon.svg" alt="" class="icon">
                                 <img src="./images/link-icon-active.svg" alt="" class="icon active">
                                 <div class="card__head">
@@ -530,7 +670,7 @@
                                     <p class="fs-p4">Водка, сахарный сироп, биттер лемон, апельсиновый ликер, лайм, дробленый лед.</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide cocktail__card">
+                            <li class="swiper-slide cocktail__card modal_order__open">
                                 <img src="./images/link-icon.svg" alt="" class="icon">
                                 <img src="./images/link-icon-active.svg" alt="" class="icon active">
                                 <div class="card__head">
@@ -549,7 +689,7 @@
                                     <p class="fs-p4">Водка, сахарный сироп, биттер лемон, апельсиновый ликер, лайм, дробленый лед.</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide cocktail__card">
+                            <li class="swiper-slide cocktail__card modal_order__open">
                                 <img src="./images/link-icon.svg" alt="" class="icon">
                                 <img src="./images/link-icon-active.svg" alt="" class="icon active">
                                 <div class="card__head">
@@ -568,7 +708,7 @@
                                     <p class="fs-p4">Водка, сахарный сироп, биттер лемон, апельсиновый ликер, лайм, дробленый лед.</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide cocktail__card">
+                            <li class="swiper-slide cocktail__card modal_order__open">
                                 <img src="./images/link-icon.svg" alt="" class="icon">
                                 <img src="./images/link-icon-active.svg" alt="" class="icon active">
                                 <div class="card__head">
@@ -587,7 +727,7 @@
                                     <p class="fs-p4">Водка, сахарный сироп, биттер лемон, апельсиновый ликер, лайм, дробленый лед.</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide cocktail__card">
+                            <li class="swiper-slide cocktail__card modal_order__open">
                                 <img src="./images/link-icon.svg" alt="" class="icon">
                                 <img src="./images/link-icon-active.svg" alt="" class="icon active">
                                 <div class="card__head">
@@ -606,7 +746,7 @@
                                     <p class="fs-p4">Водка, сахарный сироп, биттер лемон, апельсиновый ликер, лайм, дробленый лед.</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide cocktail__card">
+                            <li class="swiper-slide cocktail__card modal_order__open">
                                 <img src="./images/link-icon.svg" alt="" class="icon">
                                 <img src="./images/link-icon-active.svg" alt="" class="icon active">
                                 <div class="card__head">
@@ -625,7 +765,7 @@
                                     <p class="fs-p4">Водка, сахарный сироп, биттер лемон, апельсиновый ликер, лайм, дробленый лед.</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide cocktail__card">
+                            <li class="swiper-slide cocktail__card modal_order__open">
                                 <img src="./images/link-icon.svg" alt="" class="icon">
                                 <img src="./images/link-icon-active.svg" alt="" class="icon active">
                                 <div class="card__head">
@@ -644,7 +784,7 @@
                                     <p class="fs-p4">Водка, сахарный сироп, биттер лемон, апельсиновый ликер, лайм, дробленый лед.</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide cocktail__card">
+                            <li class="swiper-slide cocktail__card modal_order__open">
                                 <img src="./images/link-icon.svg" alt="" class="icon">
                                 <img src="./images/link-icon-active.svg" alt="" class="icon active">
                                 <div class="card__head">
@@ -663,7 +803,7 @@
                                     <p class="fs-p4">Водка, сахарный сироп, биттер лемон, апельсиновый ликер, лайм, дробленый лед.</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide cocktail__card">
+                            <li class="swiper-slide cocktail__card modal_order__open">
                                 <img src="./images/link-icon.svg" alt="" class="icon">
                                 <img src="./images/link-icon-active.svg" alt="" class="icon active">
                                 <div class="card__head">
@@ -682,7 +822,7 @@
                                     <p class="fs-p4">Водка, сахарный сироп, биттер лемон, апельсиновый ликер, лайм, дробленый лед.</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide cocktail__card">
+                            <li class="swiper-slide cocktail__card modal_order__open">
                                 <img src="./images/link-icon.svg" alt="" class="icon">
                                 <img src="./images/link-icon-active.svg" alt="" class="icon active">
                                 <div class="card__head">
@@ -701,7 +841,7 @@
                                     <p class="fs-p4">Водка, сахарный сироп, биттер лемон, апельсиновый ликер, лайм, дробленый лед.</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide cocktail__card">
+                            <li class="swiper-slide cocktail__card modal_order__open">
                                 <img src="./images/link-icon.svg" alt="" class="icon">
                                 <img src="./images/link-icon-active.svg" alt="" class="icon active">
                                 <div class="card__head">
@@ -720,7 +860,7 @@
                                     <p class="fs-p4">Водка, сахарный сироп, биттер лемон, апельсиновый ликер, лайм, дробленый лед.</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide cocktail__card">
+                            <li class="swiper-slide cocktail__card modal_order__open">
                                 <img src="./images/link-icon.svg" alt="" class="icon">
                                 <img src="./images/link-icon-active.svg" alt="" class="icon active">
                                 <div class="card__head">
@@ -739,7 +879,7 @@
                                     <p class="fs-p4">Водка, сахарный сироп, биттер лемон, апельсиновый ликер, лайм, дробленый лед.</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide cocktail__card">
+                            <li class="swiper-slide cocktail__card modal_order__open">
                                 <img src="./images/link-icon.svg" alt="" class="icon">
                                 <img src="./images/link-icon-active.svg" alt="" class="icon active">
                                 <div class="card__head">
@@ -758,7 +898,7 @@
                                     <p class="fs-p4">Водка, сахарный сироп, биттер лемон, апельсиновый ликер, лайм, дробленый лед.</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide cocktail__card">
+                            <li class="swiper-slide cocktail__card modal_order__open">
                                 <img src="./images/link-icon.svg" alt="" class="icon">
                                 <img src="./images/link-icon-active.svg" alt="" class="icon active">
                                 <div class="card__head">
@@ -777,7 +917,7 @@
                                     <p class="fs-p4">Водка, сахарный сироп, биттер лемон, апельсиновый ликер, лайм, дробленый лед.</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide cocktail__card">
+                            <li class="swiper-slide cocktail__card modal_order__open">
                                 <img src="./images/link-icon.svg" alt="" class="icon">
                                 <img src="./images/link-icon-active.svg" alt="" class="icon active">
                                 <div class="card__head">
@@ -1775,6 +1915,8 @@
         
     </div>
     
+    <!-- iMask JS -->
+    <script src="https://unpkg.com/imask"></script>
     <!-- Botstrap 5.3.3 JS file -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- swiper -->

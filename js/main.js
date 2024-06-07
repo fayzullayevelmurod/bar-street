@@ -231,8 +231,38 @@ cocktailShowMore.onclick = e => {
 
 let orderSwiper = new Swiper('.modal_order .swiper', {
     slidesPerView: 1,
+    // initialSlide: 1,
     effect: 'fade',
+    allowTouchMove: false,
 })
+
+let orderModal = document.querySelector('.modal_order'),
+    orderModalOpen = document.querySelectorAll('.modal_order__open'),
+    orderModalPrev = document.querySelector('.modal_order .btn-gray'),
+    orderModalNext = document.querySelectorAll('.modal_order .btn-red');
+
+if (orderModal) {
+    orderModalOpen.forEach(el => {
+        el.onclick = e => {
+            e.preventDefault();
+            orderModal.classList.add('active')
+        }
+    })
+
+    orderModalPrev.onclick = () => {
+        allModalclose();
+    }
+
+    orderModalNext.forEach((el, idx) => {
+        el.onclick = () => {
+            if (idx == orderModalNext.length - 1) {
+                allModalclose();
+            } else {
+                orderSwiper.slideNext();
+            }
+        }
+    })
+}
 
 var init = false;
 var swiper4;
@@ -281,3 +311,10 @@ function swiperCard() {
 }
 swiperCard();
 window.addEventListener("resize", swiperCard);
+
+let tel = document.querySelectorAll('input[type="tel"]')
+if (tel.length) {
+    tel.forEach(i => {
+        IMask(i, { mask: '+{7} (000) 000-00-00' });
+    })
+}

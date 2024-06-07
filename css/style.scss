@@ -682,6 +682,255 @@ section {
 }
 // Quiz modal end
 
+// Order modal
+.modal_order {
+    color: $color-blue-100;
+
+    &__content {
+        @include media(1199) {
+            min-height: 701px;
+        }
+
+        @include media(991) {
+            min-height: 657px;
+        }
+
+        @include media(767) {
+            padding: 36px 30px 30px;
+            min-height: 778px;
+        }
+    }
+
+    .order_card {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+
+        @include media(767) {
+            margin-top: 25px;
+        }
+
+        @include media(450) {
+            margin-bottom: 15px;
+        }
+
+        &__head {
+            margin: 20px 0 11px;
+            color: $color-gray-400;
+
+            @include media(1199) {
+                margin: 25px 0 11px;
+            }
+        }
+
+        &__item {
+            background: $color-gray-200;
+            border-radius: 10px;
+            padding-top: 5px;
+            padding-bottom: 6px;
+            color: $color-blue-100;
+
+            @include media(767) {
+                padding-top: 10px;
+                padding-bottom: 21px;
+            }
+
+            @include media(450) {
+                padding-top: 11px;
+                padding-bottom: 11px;
+            }
+
+            h3 {
+                margin-bottom: 5px;
+            }
+
+            p {
+                @include media(991) {
+                    font-size: 16px;
+                }
+            }
+
+            .text_left {
+                gap: 5px;
+                position: relative;
+
+                @include media(767) {
+                    padding-top: 14px;
+                    padding-left: 110px;
+                }
+
+                @include media(767) {
+                    padding-top: 0;
+                    padding-left: 72px;
+                }
+
+                img {
+                    @include media(767) {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 99px;
+                    }
+
+                    @include media(450) {
+                        width: 60px;
+                    }
+                }
+
+                h3 {
+                    @include media(991) {
+                        font-size: 16px;
+                    }
+                }
+
+                p {
+                    @include media(991) {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .order_price {
+                @include media(767) {
+                    padding: 8px 0 20px 110px;
+                }
+
+                @include media(450) {
+                    padding: 8px 0 12px 72px;
+                }
+            }
+
+            .all_price {
+                @include media(767) {
+                    padding-right: 10px;
+                }
+            }
+
+            a {
+                @include media(767) {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    .calculate {
+        width: 121px;
+        margin: 0 auto;
+        background: white;
+        padding: 6px 14px;
+        border-radius: 50px;
+        gap: 15px;
+        font-size: 18px;
+        font-weight: 500;
+
+        @include media(991) {
+            font-size: 16px;
+        }
+
+        @include media(767) {
+            margin: 0 0 0 110px;
+        }
+
+        @include media(767) {
+            margin-left: 0;
+            width: 160px;
+            gap: 17px;
+        }
+    }
+
+    .prices {
+        margin-bottom: 20px;
+
+        @include media(1199) {
+            margin-bottom: 10px;
+        }
+
+        @include media(450) {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        &_left {
+            gap: 5px;
+        }
+
+        h3 {
+            color: $color-red-100;
+
+            @include media(767) {
+                font-size: 20px;
+            }
+        }
+
+        p {
+            @include media(767) {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .subtitle {
+        @include media(767) {
+            font-size: 14px;
+        }
+    }
+
+    &__form {
+        gap: 20px;
+        padding-top: 20px;
+
+        @include media(1199) {
+            padding-top: 11px;
+        }
+
+        @include media(991) {
+            gap: 10px;
+        }
+
+        @include media(767) {
+            margin-bottom: 20px;
+        }
+
+        label {
+            margin-bottom: 10px;
+
+            @include media(991) {
+                font-size: 18px;
+            }
+        }
+
+        textarea {
+            resize: none;
+            height: 130px;
+
+            @include media(1199) {
+                height: 103px;
+            }
+
+            @include media(991) {
+                height: 94px;
+            }
+
+            @include media(767) {
+                height: 111px;
+            }
+
+            @include media(450) {
+                height: 104px;
+            }
+        }
+    }
+
+    span.fs-p4 {
+        @include media(767) {
+            font-size: 14px;
+        }
+    }
+}
+// Order modal end
+
 // Header
 .header {
     z-index: 5;
