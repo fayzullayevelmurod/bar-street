@@ -83,7 +83,7 @@ if (rangeInp.length) {
 let quizSlider = new Swiper('.modal_quiz .swiper', {
     slidesPerView: 1,
     // initialSlide: 3,
-    // allowTouchMove: false,
+    allowTouchMove: false,
     effect: 'fade',
 })
 
@@ -207,3 +207,8 @@ cocktailShowMore.onclick = e => {
     cocktailLength += 5;
     sortCocktailList();
 }
+
+let orderSwiper = new Swiper('.modal_order .swiper', {
+    slidesPerView: 1,
+    effect: 'fade',
+})
