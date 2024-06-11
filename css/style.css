@@ -209,6 +209,10 @@ section {
   background: #F5F5F5;
   padding: 1px 15px;
   border-radius: 50px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: ew-resize;
 }
 .range_inp__slide input {
   width: 100%;
@@ -217,6 +221,9 @@ section {
   height: 8px;
   opacity: 0;
   cursor: pointer;
+}
+.range_inp__slide input::-webkit-slider-thumb {
+  cursor: ew-resize;
 }
 
 .main_modal {
@@ -1186,28 +1193,13 @@ section {
 .cocktail__card p {
   line-height: 150%;
 }
-.cocktail__card:hover p {
-  display: none;
+.cocktail__card .card__head:hover ~ .card__hover {
+  display: block;
 }
-@media screen and (max-width: 1399px) {
-  .cocktail__card:hover .icon {
-    display: none;
-  }
-  .cocktail__card:hover .icon.active {
-    display: block;
-  }
-}
-.cocktail__card:hover .card__calculate {
+.cocktail__card .card__head:hover ~ p,
+.cocktail__card .card__head:hover ~ .icon,
+.cocktail__card .card__head:hover ~ .card__calculate {
   display: none !important;
-}
-.cocktail__card:hover .card__hover {
-  display: block;
-}
-.cocktail__card:hover .card__hover p {
-  display: block;
-}
-.cocktail__card:hover .card__hover p:last-child {
-  line-height: 120%;
 }
 .cocktail .btn-red {
   padding: 9px 91px 10px;

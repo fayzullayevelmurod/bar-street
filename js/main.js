@@ -98,6 +98,62 @@ if (rangeInp.length) {
             line.style.width = 100 * inp.value / maxVal + '%';
             spn.style.left = 100 * inp.value / maxVal + '%';
         }
+
+        spn.addEventListener('mousedown', mouseDown);
+
+        function mouseDown (e) {
+            e.preventDefault();
+            document.addEventListener("mousemove", mouseMove);
+            document.addEventListener("mouseup", mouseUp);
+        }
+
+        function mouseMove (e) {
+            let block = el.getBoundingClientRect();
+            if (e.clientX > block.left && e.clientX < block.left + block.width) {
+                const elClientX = el.getBoundingClientRect().left;
+                const clientX = e.clientX - elClientX;
+                let val = clientX * 100 / el.getBoundingClientRect().width;
+                inp.value = maxVal * val / 100;
+                line.style.width = val + '%';
+                spn.style.left = val + '%';
+                spn.textContent = inp.value;
+            }
+        }
+
+        function mouseUp (e) {
+            e.preventDefault();
+            document.removeEventListener("mousemove", mouseMove);
+            document.removeEventListener("mouseup", mouseUp);
+        }
+
+        spn.addEventListener('touchstart', onTouchStart);
+
+        function onTouchStart (e) {
+            e.preventDefault();
+            spn.addEventListener("touchmove", onTouchMove);
+            spn.addEventListener("touchend", onTouchEnd);
+        }
+
+        function onTouchMove (e) {
+            let block = el.getBoundingClientRect();
+            if (e.touches[0].clientX > block.left && e.touches[0].clientX < block.left + block.width) {
+                const elClientX = block.left;
+                const clientX = e.touches[0].clientX - elClientX;
+                let val = clientX * 100 / block.width;
+                inp.value = maxVal * val / 100;
+                line.style.width = val + '%';
+                spn.style.left = val + '%';
+                spn.textContent = inp.value;
+            }
+        }
+
+        function onTouchEnd (e) {
+            e.preventDefault();
+            spn.removeEventListener("touchmove", onTouchMove);
+            spn.removeEventListener("touchend", onTouchEnd);
+        }
+
+
     })
 }
 // Range slider end
@@ -316,5 +372,28 @@ let tel = document.querySelectorAll('input[type="tel"]')
 if (tel.length) {
     tel.forEach(i => {
         IMask(i, { mask: '+{7} (000) 000-00-00' });
+    })
+}
+
+const cocktailCards = document.querySelectorAll('.cocktail__card');
+if (cocktailCards.length) {
+    cocktailCards.forEach(card => {
+        let calculate = card.querySelector('.card__calculate'),
+            minusBtn = card.querySelectorAll('.card__calculate button')[0],
+            plusBtn = card.querySelectorAll('.card__calculate button')[1],
+            text = card.querySelector('.card__calculate span');
+        calculate.onclick = e => {
+            e.stopImmediatePropagation();
+        }
+
+        minusBtn.onclick = e => {
+            if (text.textContent != 0) {
+                text.textContent = Number(text.textContent) - 1;
+            }
+        }
+
+        plusBtn.onclick = e => {
+            text.textContent = Number(text.textContent) + 1;
+        }
     })
 }

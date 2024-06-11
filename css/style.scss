@@ -255,6 +255,8 @@ section {
             background: $color-gray-200;
             padding: 1px 15px;
             border-radius: 50px;
+            user-select: none;
+            cursor: ew-resize;
         }
 
         input {
@@ -264,6 +266,10 @@ section {
             height: 8px;
             opacity: 0;
             cursor: pointer;
+
+            &::-webkit-slider-thumb {
+                cursor: ew-resize;
+            }
         }
     }
 }
@@ -1270,38 +1276,48 @@ section {
             line-height: 150%;
         }
 
-        &:hover {
-            p {
-                display: none;
-            }
+        // &:hover {
+        //     p {
+        //         display: none;
+        //     }
 
-            .icon {
-                @include media(1399) {
-                    display: none;
+        //     .icon {
+        //         @include media(1399) {
+        //             display: none;
 
-                    &.active {
-                        display: block;
-                    }
-                }
-            }
+        //             &.active {
+        //                 display: block;
+        //             }
+        //         }
+        //     }
 
-            .card {
-                &__calculate {
-                    display: none !important;
-                }
+        //     .card {
+        //         &__calculate {
+        //             display: none !important;
+        //         }
 
-                &__hover {
-                    display: block;
+        //         &__hover {
+        //             display: block;
 
-                    p {
-                        display: block;
+        //             p {
+        //                 display: block;
 
-                        &:last-child {
-                            line-height: 120%;
-                        }
-                    }
-                }
-            }
+        //                 &:last-child {
+        //                     line-height: 120%;
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+
+        .card__head:hover ~ .card__hover {
+            display: block;
+        }
+
+        .card__head:hover ~ p,
+        .card__head:hover ~ .icon,
+        .card__head:hover ~ .card__calculate {
+            display: none !important;
         }
     }
 
